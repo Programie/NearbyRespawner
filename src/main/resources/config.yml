@@ -1,0 +1,8 @@
+# Minimum and maximum distance from last death to use for random location
+death-location-distance:
+  min: 0
+  max: 1000
+
+# Minimum distance from normal respawn location (i.e. location of spawn bed or world spawn) required before picking a random spawn location
+# Set to zero to always pick a random respawn location
+min-spawn-distance: 1000
