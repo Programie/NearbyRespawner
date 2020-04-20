@@ -60,8 +60,10 @@ public final class NearbyRespawner extends JavaPlugin implements Listener {
 
         double min = getConfig().getDouble("death-location-distance.min", 0);
         double max = getConfig().getDouble("death-location-distance.max", 1000);
+        int maxChunksToTry = getConfig().getInt("max-chunks-to-try", 10);
+        int maxTriesInChunk = getConfig().getInt("max-tries-in-chunk", 10);
 
-        respawnLocation = findNearbyLocation(deathLocation, min, max);
+        respawnLocation = findNearbyLocation(deathLocation, min, max, maxChunksToTry, maxTriesInChunk);
         if (respawnLocation == null) {
             return;
         }
@@ -74,15 +76,15 @@ public final class NearbyRespawner extends JavaPlugin implements Listener {
         perPlayerDeathLocation.remove(event.getPlayer().getUniqueId());
     }
 
-    private Location findNearbyLocation(Location location, double min, double max) {
-        for (int currentTry = 1; currentTry <= 5; currentTry++) {
+    private Location findNearbyLocation(Location location, double min, double max, int maxChunksToTry, int maxTriesInChunk) {
+        for (int currentTry = 1; currentTry <= maxChunksToTry; currentTry++) {
             Location newLocation = location.clone();
 
             newLocation.add(getRandom(min, max, true), 0, getRandom(min, max, true));
 
             Chunk chunk = newLocation.getChunk();
 
-            for (int currentChunkTry = 1; currentChunkTry <= 10; currentChunkTry++) {
+            for (int currentChunkTry = 1; currentChunkTry <= maxTriesInChunk; currentChunkTry++) {
                 Block block = getHighestRandomBlock(chunk);
 
                 // Prevent spawning in water or lava

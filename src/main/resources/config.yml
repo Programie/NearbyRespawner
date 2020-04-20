@@ -6,3 +6,9 @@ death-location-distance:
 # Minimum distance from normal respawn location (i.e. location of spawn bed or world spawn) required before picking a random spawn location
 # Set to zero to always pick a random respawn location
 min-spawn-distance: 1000
+
+# Maximum number of chunks to search in for a random safe location
+max-chunks-to-try: 10
+
+# Maximum number of tries to search for a random safe location in the same chunk
+max-tries-in-chunk: 10
