@@ -21,7 +21,7 @@ You can get the latest release from [GitLab](https://gitlab.com/Programie/Nearby
 
 ## Configuration
 
-The plugin allows to change some values described in the [config.yml provided with this plugin](src/main/resources/config.yml).
+The plugin allows to change some values described in the [config.yml provided with this plugin](src/main/resources/config.yml). Load the plugin once to generate it.
 
 ## Commands
 
