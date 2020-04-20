@@ -27,3 +27,14 @@ release:
       - target/NearbyRespawner.jar
   only:
     - tags
+
+snapshot-release:
+  stage: deploy
+  script: mvn package
+  dependencies:
+    - test
+  artifacts:
+    paths:
+      - target/NearbyRespawner.jar
+  only:
+    - master
