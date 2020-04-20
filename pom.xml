@@ -8,7 +8,7 @@
   <packaging>jar</packaging>
 
   <name>NearbyRespawner</name>
-  <description>Respawn players near the death location on death</description>
+  <description>Respawn players at a random location near the death location</description>
   <url>https://gitlab.com/Programie/NearbyRespawner</url>
 
   <properties>
