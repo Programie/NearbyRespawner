@@ -5,3 +5,7 @@ author: Programie
 website: ${project.url}
 api-version: 1.13
 main: com.selfcoders.nearbyrespawner.NearbyRespawner
+permissions:
+  nearbyrespawner.random-respawn:
+    description: 'Allow players to get respawned at a random location'
+    default: true

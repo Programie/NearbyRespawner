@@ -42,6 +42,10 @@ public final class NearbyRespawner extends JavaPlugin implements Listener {
 
         perPlayerDeathLocation.remove(player.getUniqueId());
 
+        if (!player.hasPermission("nearbyrespawner.random-respawn")) {
+            return;
+        }
+
         World deathWorld = deathLocation.getWorld();
         if (deathWorld == null) {
             return;
