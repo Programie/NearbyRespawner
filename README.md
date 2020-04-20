@@ -2,7 +2,7 @@
 
 A Minecraft Bukkit plugin which respawns players near the death location on death.
 
-<h1 align="center"><img src="logo.png" alt="Logo"/></h1>
+<img src="logo.png" alt="Logo" height="300" style="display:block; margin-left:auto; margin-right:auto;"/>
 
 [![pipeline status](https://gitlab.com/Programie/NearbyRespawner/badges/master/pipeline.svg)](https://gitlab.com/Programie/NearbyRespawner/commits/master)
 [![download latest release](https://img.shields.io/badge/download-latest-blue.svg)](https://gitlab.com/Programie/NearbyRespawner/-/jobs/artifacts/master/raw/target/NearbyRespawner.jar?job=release)
