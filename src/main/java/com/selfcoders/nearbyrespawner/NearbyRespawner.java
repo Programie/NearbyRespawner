@@ -40,6 +40,8 @@ public final class NearbyRespawner extends JavaPlugin implements Listener {
             return;
         }
 
+        perPlayerDeathLocation.remove(player.getUniqueId());
+
         World deathWorld = deathLocation.getWorld();
         if (deathWorld == null) {
             return;
