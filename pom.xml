@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.selfcoders.common</groupId>
     <artifactId>bukkit-plugin-parent</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
   </parent>
 
   <groupId>com.selfcoders</groupId>
@@ -17,10 +17,9 @@
   <description>Respawn players at a random location near the death location</description>
   <url>https://gitlab.com/Programie/NearbyRespawner</url>
 
-  <scm>
-    <developerConnection>scm:git:ssh://git@gitlab.com/Programie/NearbyRespawner.git</developerConnection>
-    <tag>HEAD</tag>
-  </scm>
+  <properties>
+    <bukkit-api-version>1.14.4</bukkit-api-version>
+  </properties>
 
   <repositories>
     <repository>
@@ -28,12 +27,4 @@
       <url>https://gitlab.com/api/v4/projects/Programie%2FCommon/packages/maven</url>
     </repository>
   </repositories>
-
-  <dependencies>
-    <dependency>
-      <groupId>org.bukkit</groupId>
-      <artifactId>bukkit</artifactId>
-      <version>1.14.4-R0.1-SNAPSHOT</version>
-    </dependency>
-  </dependencies>
 </project>
