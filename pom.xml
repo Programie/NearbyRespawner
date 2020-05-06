@@ -2,6 +2,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
+  <parent>
+    <groupId>com.selfcoders.common</groupId>
+    <artifactId>bukkit-plugin-parent</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </parent>
+
   <groupId>com.selfcoders</groupId>
   <artifactId>nearbyrespawner</artifactId>
   <version>1.1-SNAPSHOT</version>
@@ -11,10 +17,6 @@
   <description>Respawn players at a random location near the death location</description>
   <url>https://gitlab.com/Programie/NearbyRespawner</url>
 
-  <properties>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-
   <scm>
     <developerConnection>scm:git:ssh://git@gitlab.com/Programie/NearbyRespawner.git</developerConnection>
     <tag>HEAD</tag>
@@ -22,8 +24,8 @@
 
   <repositories>
     <repository>
-      <id>spigot-repo</id>
-      <url>https://hub.spigotmc.org/nexus/content/repositories/snapshots/</url>
+      <id>common-repo</id>
+      <url>https://gitlab.com/api/v4/projects/Programie%2FCommon/packages/maven</url>
     </repository>
   </repositories>
 
@@ -34,43 +36,4 @@
       <version>1.14.4-R0.1-SNAPSHOT</version>
     </dependency>
   </dependencies>
-
-  <build>
-    <resources>
-      <resource>
-        <filtering>true</filtering>
-        <directory>src/main/resources</directory>
-      </resource>
-    </resources>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.7.0</version>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-        </configuration>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-jar-plugin</artifactId>
-        <version>3.0.2</version>
-        <configuration>
-          <finalName>${project.name}</finalName>
-        </configuration>
-      </plugin>
-
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-release-plugin</artifactId>
-        <version>3.0.0-M1</version>
-        <configuration>
-          <tagNameFormat>@{project.version}</tagNameFormat>
-          <allowTimestampedSnapshots>true</allowTimestampedSnapshots>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
 </project>
