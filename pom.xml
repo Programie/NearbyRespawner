@@ -66,7 +66,8 @@
         <artifactId>maven-release-plugin</artifactId>
         <version>3.0.0-M1</version>
         <configuration>
-          <tagNameFormat>v@{project.version}</tagNameFormat>
+          <tagNameFormat>@{project.version}</tagNameFormat>
+          <allowTimestampedSnapshots>true</allowTimestampedSnapshots>
         </configuration>
       </plugin>
     </plugins>
