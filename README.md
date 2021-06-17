@@ -19,7 +19,7 @@ In case your normal respawn location (e.g. your spawn bed or world spawn) would 
 
 ## Installation
 
-You can get the latest release from [GitLab](https://gitlab.com/Programie/NearbyRespawner/-/jobs/artifacts/master/raw/target/NearbyRespawner.jar?job=release).
+You can get the latest release from [GitLab](https://gitlab.com/Programie/NearbyRespawner/-/releases) and [CurseForge](https://www.curseforge.com/minecraft/bukkit-plugins/nearbyrespawner).
 
 ## Configuration
 
