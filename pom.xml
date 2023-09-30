@@ -15,7 +15,12 @@
 
   <name>NearbyRespawner</name>
   <description>Respawn players at a random location near the death location</description>
-  <url>https://gitlab.com/Programie/NearbyRespawner</url>
+  <url>https://github.com/Programie/NearbyRespawner</url>
+
+  <scm>
+    <developerConnection>scm:git:ssh://git@github.com/Programie/NearbyRespawner.git</developerConnection>
+    <tag>HEAD</tag>
+  </scm>
 
   <properties>
     <bukkit-api-version>1.14.4</bukkit-api-version>
